@@ -349,11 +349,15 @@ function updateAlarmButton(){
 
 // UI wiring
 $('btnAdd').addEventListener('click', ()=>{ $('modalAdd').classList.add('show'); $('aliasInput').value=''; $('hostInput').value=''; });
+
+// === CÓDIGO CORREGIDO ===
 $('btnScanOpen').addEventListener('click', ()=>{
   $('modalAdd').classList.add('show');
   if ($('qrReaderHolder')) $('qrReaderHolder').style.display = 'block';
   startQrScanner(); // usa lector QR interno
-}); });
+});
+// =========================
+
 $('modalClose').addEventListener('click', ()=>{ $('modalAdd').classList.remove('show'); stopQrScanner(); $('qrReaderHolder') && ($('qrReaderHolder').style.display='none'); });
 
 // MODIFICACIÓN: Lógica de guardado con Alias y Host separados
@@ -398,6 +402,8 @@ function fetchSetTemp(value){ if(!app.current) return; fetch((app.current.host.s
 // QR scanning (html5-qrcode dynamic load)
 let qrScanner = null;
 function ensureQrLib(){ return new Promise((resolve,reject)=>{ if(window.Html5Qrcode) return resolve(); const s = document.createElement('script'); s.src = 'https://unpkg.com/html5-qrcode@2.3.8/minified/html5-qrcode.min.js'; s.onload = ()=>resolve(); s.onerror = ()=>reject(); document.head.appendChild(s); }); }
+/*
+// Se comenta la versión anterior de startQrScanner para evitar la redeclaración
 async function startQrScanner(){
   if(!window.Html5Qrcode){ $('qrReader') && ($('qrReader').textContent = 'QR loader no disponible.'); return; }
   try{
@@ -412,6 +418,7 @@ async function startQrScanner(){
     $('qrReader') && ($('qrReader').textContent = 'No se pudo acceder a la cámara. Usa HTTPS o instala la PWA.');
   }
 }
+*/
 function stopQrScanner(){ if(qrScanner){ qrScanner.stop().then(()=>{ qrScanner.clear(); qrScanner = null; }).catch(()=>{ qrScanner = null; }); } }
 
 // MODIFICACIÓN: Lógica para intentar extraer Alias y Host del QR
