@@ -20,12 +20,21 @@ if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
   --accent1:#00bfa6; --accent2:#0097a7;
   --deep:#0f766e; --muted:#607d8b; --card:#ffffff;
 }
-<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="AQUINEA" />
-<link rel="manifest" href="/site.webmanifest" />
+<!-- Favicon clásico -->
+<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+
+<!-- Favicon moderno en PNG -->
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96x96.png">
+
+<!-- Favicon SVG para navegadores modernos -->
+<link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
+
+<!-- Apple Touch Icon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+<!-- Manifest para PWA -->
+<link rel="manifest" href="/manifest.json">
+
   
     ============================================================
     3. CONFIGURACIÓN OPEN GRAPH (OG) PARA REDES SOCIALES
@@ -34,7 +43,7 @@ if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
     <meta property="og:title" content="AQUINEA: Cada Gota Cuenta">
     <meta property="og:description" content="Maneja tus dispositivos AQUINEA desde tu celular">
     <!-- Imagen de preview (OG) - ¡FORZANDO RECARGA! -->
-    <meta property="og:image" content="https://aquinea.vercel.app/assets/social-share-1200x630.png?v=2">
+    <meta property="og:image" content="https://aquinea.vercel.app/assets/social-share-1200x630.png">
     <meta property="og:url" content="https://aquinea.vercel.app/">
     <meta property="og:type" content="website">
 
