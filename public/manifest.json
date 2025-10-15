@@ -1,7 +1,7 @@
 {
   "name": "AQUINEA",
   "short_name": "AQUINEA",
-  "description": "Plataforma AQUINEA — investigación, recursos y herramientas.",
+  "description": "AQUINEA, Controla Tus Dispositivos AQUINEA Desde Tu Celular",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
