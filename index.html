@@ -20,36 +20,13 @@ if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
   --accent1:#00bfa6; --accent2:#0097a7;
   --deep:#0f766e; --muted:#607d8b; --card:#ffffff;
 }
-
-    ============================================================
-    1. CONFIGURACIÓN BÁSICA DE FAVICON (Icono del navegador)
-    ============================================================
-    -->
-    <!-- Ícono estándar (48x48) - ¡FORZANDO RECARGA! -->
-    <link rel="icon" href="/assets/favicon.ico?v=2" sizes="48x48">
-    <!-- Ícono vectorial SVG (mejor calidad) - ¡FORZANDO RECARGA! -->
-    <link rel="icon" href="/assets/icon.svg?v=2" sizes="any" type="image/svg+xml">
-    <!-- Icono de alta resolución para dispositivos Apple (180x180 recomendado) - ¡FORZANDO RECARGA! -->
-    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=2">
-
-
-    <!--
-    ============================================================
-    2. CONFIGURACIÓN PWA/HOMESCREEN (Android/iOS "Agregar al inicio")
-    ============================================================
-    -->
-    <!-- Link al archivo manifest.json (REQUERIDO para Android/PWA) - ¡FORZANDO RECARGA! -->
-    <link rel="manifest" href="/manifest.json?v=2">
-
-    <!-- Meta tags específicas para iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="AQUINEA">
-    <!-- Color de la barra de estado superior de iOS -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <!-- Color principal (theme-color): Cyan Pastel Apagado -->
-    <meta name="theme-color" content="#80CBC4">
-
-    <!--
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="AQUINEA" />
+<link rel="manifest" href="/site.webmanifest" />
+  
     ============================================================
     3. CONFIGURACIÓN OPEN GRAPH (OG) PARA REDES SOCIALES
     ============================================================
