@@ -20,6 +20,77 @@ if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
   --accent1:#00bfa6; --accent2:#0097a7;
   --deep:#0f766e; --muted:#607d8b; --card:#ffffff;
 }
+
+============================================================
+    1. CONFIGURACIÓN BÁSICA DE FAVICON (Icono del navegador)
+    ============================================================
+    -->
+    <!-- Ícono estándar (48x48) -->
+    <link rel="icon" href="/assets/favicon.ico" sizes="48x48">
+    <!-- Ícono vectorial SVG (mejor calidad) -->
+    <link rel="icon" href="/assets/icon.svg" sizes="any" type="image/svg+xml">
+    <!-- Icono de alta resolución para dispositivos Apple (180x180 recomendado) -->
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+
+    <!--
+    ============================================================
+    2. CONFIGURACIÓN PWA/HOMESCREEN (Android/iOS "Agregar al inicio")
+    ============================================================
+    -->
+    <!-- Link al archivo manifest.json (REQUERIDO para Android/PWA) -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Meta tags específicas para iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- ** EDITAR ESTO ** Nombre que aparecerá bajo el ícono en iOS -->
+    <meta name="apple-mobile-web-app-title" content="App Genial">
+    <!-- Color de la barra de estado superior de iOS -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- Color principal (theme-color): Cyan Pastel Apagado -->
+    <meta name="theme-color" content="#80CBC4">
+
+    <!--
+    ============================================================
+    3. CONFIGURACIÓN OPEN GRAPH (OG) PARA REDES SOCIALES
+    ============================================================
+    -->
+    <meta property="og:title" content="AQUINEA: Cada Gota Cuenta">
+    <meta property="og:description" content="Maneja tus dispositivos AQUINEA desde tu celular">
+    <meta property="og:image" content="https://aquinea.vercel.app/assets/social-share-1200x630.png">
+    <meta property="og:url" content="https://aquinea.vercel.app/">
+    <meta property="og:type" content="website">
+
+    <style>
+        /* Estilos básicos de la página */
+        body {
+            font-family: sans-serif;
+            /* Color de Fondo: Gris (#F3F4F6) */
+            background-color: #F3F4F6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #1f2937;
+        }
+        .container {
+            max-width: 600px;
+            background-color: white;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            /* Color Principal: Cyan Pastel Apagado (#80CBC4) */
+            color: #80CBC4;
+            font-size: 1.875rem;
+        }
+
+
 html,body{height:100%;margin:0;padding:0;background:linear-gradient(135deg,var(--bg1),var(--bg2));font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
 .app-wrap{position:fixed;inset:0;margin:auto;max-width:980px;background:linear-gradient(180deg,white,#fbfffe);border-radius:14px;overflow:hidden;box-shadow:0 20px 50px rgba(13,33,27,0.12);display:flex;flex-direction:column;}
 .header{display:flex;align-items:center;gap:12px;padding:14px 18px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;}
