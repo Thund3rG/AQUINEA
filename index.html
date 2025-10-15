@@ -21,16 +21,16 @@ if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
   --deep:#0f766e; --muted:#607d8b; --card:#ffffff;
 }
 
-============================================================
+    ============================================================
     1. CONFIGURACIÓN BÁSICA DE FAVICON (Icono del navegador)
     ============================================================
     -->
-    <!-- Ícono estándar (48x48) -->
-    <link rel="icon" href="/assets/favicon.ico" sizes="48x48">
-    <!-- Ícono vectorial SVG (mejor calidad) -->
-    <link rel="icon" href="/assets/icon.svg" sizes="any" type="image/svg+xml">
-    <!-- Icono de alta resolución para dispositivos Apple (180x180 recomendado) -->
-    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <!-- Ícono estándar (48x48) - ¡FORZANDO RECARGA! -->
+    <link rel="icon" href="/assets/favicon.ico?v=2" sizes="48x48">
+    <!-- Ícono vectorial SVG (mejor calidad) - ¡FORZANDO RECARGA! -->
+    <link rel="icon" href="/assets/icon.svg?v=2" sizes="any" type="image/svg+xml">
+    <!-- Icono de alta resolución para dispositivos Apple (180x180 recomendado) - ¡FORZANDO RECARGA! -->
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=2">
 
 
     <!--
@@ -38,8 +38,8 @@ if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
     2. CONFIGURACIÓN PWA/HOMESCREEN (Android/iOS "Agregar al inicio")
     ============================================================
     -->
-    <!-- Link al archivo manifest.json (REQUERIDO para Android/PWA) -->
-    <link rel="manifest" href="/manifest.json">
+    <!-- Link al archivo manifest.json (REQUERIDO para Android/PWA) - ¡FORZANDO RECARGA! -->
+    <link rel="manifest" href="/manifest.json?v=2">
 
     <!-- Meta tags específicas para iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -56,7 +56,8 @@ if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
     -->
     <meta property="og:title" content="AQUINEA: Cada Gota Cuenta">
     <meta property="og:description" content="Maneja tus dispositivos AQUINEA desde tu celular">
-    <meta property="og:image" content="https://aquinea.vercel.app/assets/social-share-1200x630.png">
+    <!-- Imagen de preview (OG) - ¡FORZANDO RECARGA! -->
+    <meta property="og:image" content="https://aquinea.vercel.app/assets/social-share-1200x630.png?v=2">
     <meta property="og:url" content="https://aquinea.vercel.app/">
     <meta property="og:type" content="website">
 
