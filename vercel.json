@@ -3,7 +3,10 @@
   "rewrites": [
     { "source": "/assets/(.*)", "destination": "/assets/$1" },
     { "source": "/manifest.json", "destination": "/manifest.json" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/_next/(.*)", "destination": "/_next/$1" },
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/static/(.*)", "destination": "/static/$1" },
+    { "source": "/(?!assets/|_next/|api/|static/|manifest.json)(.*)", "destination": "/index.html" }
   ],
   "headers": [
     {
@@ -15,7 +18,8 @@
     {
       "source": "/manifest.json",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=86400" }
+        { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=86400" },
+        { "key": "Content-Type", "value": "application/json" }
       ]
     }
   ]
