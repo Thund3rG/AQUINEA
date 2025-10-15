@@ -12,8 +12,10 @@ if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
   
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Aquinea Control v2.0</title>
+<title>Aquinea Control</title>
 <meta name="description" content="Aquinea Control — panel de control inteligente" />
+<meta name="apple-mobile-web-app-title" content="Aquinea Control">
+<meta name="theme-color" content="#0b6efd">
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
 :root{
@@ -21,6 +23,7 @@ if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
   --accent1:#00bfa6; --accent2:#0097a7;
   --deep:#0f766e; --muted:#607d8b; --card:#ffffff;
 }
+  <link rel="manifest" href="/manifest.json">
   <!-- Favicon clásico -->
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
